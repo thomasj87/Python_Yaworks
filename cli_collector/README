@@ -1,0 +1,5 @@
+Exit codes:
+
+10 > Known error
+100 > Unsupported feature
+200 > Unknown error

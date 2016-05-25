@@ -1,0 +1,38 @@
+{
+  "SETTINGS" : {
+    "PATH": ["192.168.57.2"],
+    "SHELL": "/bin/bash",
+    "SSH_COMMAND": "ssh USER@HOST -p PORT",
+    "TELNET_COMMAND": "telnet HOST:PORT",
+    "TIMEOUT": 10
+    },
+  "JUMPSERVERS" : {
+    "192.168.57.2": {
+      "USERNAME": "debian",
+      "PROMPT": "@debian:~\\$",
+      "CONNECTION_TYPE": "SSH",
+      "SSH_COMMAND": "ssh -o StrictHostKeyChecking=no USER@HOST -p PORT",
+      "PORT": 22,
+      "TELNET_COMMAND": "telnet HOST PORT",
+      "TIMEOUT": 10
+    },
+    "192.168.2.101": {
+      "USERNAME": "teopy",
+      "PROMPT": "R1#",
+      "CONNECTION_TYPE": "SSH",
+      "SSH_COMMAND": "ssh -l USER -p PORT HOST",
+      "PORT": 22,
+      "TELNET_COMMAND": "telnet HOST PORT",
+      "TIMEOUT": 10
+    },
+    "192.168.2.102": {
+      "USERNAME": "teopy",
+      "PROMPT": "R2#",
+      "CONNECTION_TYPE": "TELNET",
+      "SSH_COMMAND": "ssh -l USER -p PORT HOST",
+      "PORT": 23,
+      "TELNET_COMMAND": "telnet HOST PORT",
+      "TIMEOUT": 10
+    }
+  }
+}
