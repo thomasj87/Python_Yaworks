@@ -28,6 +28,7 @@ import ConfigParser
 import getpass
 import fnmatch
 import logging
+import sys
 
 try:
     import keyring
@@ -48,10 +49,14 @@ class AccountManager(object):
     Account manager object.
     """
     def __init__(self,
-                 config_file='accounts.cfg',
+                 config_file,
                  username_cb=None,
                  password_cb=None,
                  reset=False):
+        if config_file is None:
+            logging.error("No account details set!")
+            sys.exit(201)
+
         self.config_file = config_file
         self.config = ConfigParser.SafeConfigParser({'username': '', 'password_type': ''})
         self.config.read(self.config_file)

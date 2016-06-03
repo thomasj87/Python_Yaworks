@@ -1,2 +1,1 @@
-import accountmgr
 import cli_collector

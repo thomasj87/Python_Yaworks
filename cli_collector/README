@@ -1,5 +1,8 @@
 Exit codes:
 
-10 > Known error
-100 > Unsupported feature
+100 > Known error
+101 > Unsupported feature
+102 > Reoccuring node, might cause loop
+103 > Cannot connect, connection required.
 200 > Unknown error
+201 > Setting missing
